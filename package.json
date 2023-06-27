@@ -4,8 +4,8 @@
   "description": "Studlearn is a web platform where students can get there solutions in all the formats.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js", 
     "build": "npm i"
   },
   "author": "",
