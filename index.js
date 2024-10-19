@@ -16,5 +16,5 @@ app.use('/auth', require('./routes/auth'))
 app.use('/ques', require('./routes/ques'))
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${ROUTE_URL}`)
+    console.log(`Example app listening on port ${port}`)
 })
