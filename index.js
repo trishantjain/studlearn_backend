@@ -7,7 +7,7 @@ const ROUTE_URL = process.env.ROUTE_URL;
 connectToMongo();
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.BK_PORT
 
 app.use(cors())
 app.use(express.json())
