@@ -11,15 +11,15 @@ const JWT_SECRET = "trishantkaiseho@88"
 //* Route 1 --> "SIGNUP" - '/auth/createuser'
 router.post('/createuser', [
     body('email', 'Enter a valid email').isEmail(),
-    body('name', 'Enter a valid name').isLength({ min: 6 }),
-    body('phone', 'Enter a valid phone').isLength({ min: 10, max: 10 }),
+    body('name', 'Enter Name of atleast 6 Character').isLength({ min: 6 }),
+    body('phone', 'Enter a valid Phone Number').isLength({ min: 10, max: 10 }),
     body('password', 'set password of atleast 5 character').isLength({ min: 5 })
 ], async (req, res) => {
 
     let success = false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res.status(400).json({ success: false, errors: errors.array() });
 
     }
 
