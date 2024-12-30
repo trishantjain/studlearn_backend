@@ -6,14 +6,17 @@ const Contact = require('../models/Contact')
 
 router.post('/addquery', async (req, res) => {
     try {
+        let success = false
+
         queryMsg = await Contact.create({
             name: req.body.name,
             email: req.body.email,
             message: req.body.message
         })
 
-        res.status(200).send("Query executed");
-        console.log("data updated to db")
+        success = true
+        res.json({ success})
+
     } catch (error) {
         res.status(500).send("Add query catch block");
     }
