@@ -14,6 +14,7 @@ app.use(express.json())
 
 app.use('/auth', require('./routes/auth'))
 app.use('/ques', require('./routes/ques'))
+app.use('/contact', require('./routes/contact'))
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
